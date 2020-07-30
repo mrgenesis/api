@@ -1,9 +1,16 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "scripts" : {
-    "test": "echo \"No tests yet...\""
+  "name": "mrgenesis",
+  "version": "1.0.0",
+  "description": "Este projeto será composto de várias módulos com várias apis.",
+  "author": "Mr. Genesis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrgenesis/mrgenesis.api"
   },
-  "author": ""
+  "homepage": "https://github.com/mrgenesis/mrgenesis.api#readme",
+  "scripts" : {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "license": "MIT"
 }

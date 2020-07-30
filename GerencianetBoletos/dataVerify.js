@@ -1,5 +1,8 @@
 function dataVerify() {
   return {
+    all: function ({name, cpf, phone}) {
+      return this.name(name) && this.cpf(cpf) && this.phone(phone);
+    },
     name: function (name) {
       const rule = /^[ ]*(.+[ ]+)+.+[ ]*$/;
       return rule.test(name);

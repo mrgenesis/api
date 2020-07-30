@@ -1,4 +1,5 @@
 const { name, cpf, phone, value } = require('../GerencianetBoletos/dataVerify');
+const dataVerify  = require('../GerencianetBoletos/dataVerify');
 const expect = require('chai').expect;
 
 describe('dataVerify', function () {
@@ -23,5 +24,9 @@ describe('dataVerify', function () {
     expect(value(5.7)).to.equal('570');
     expect(value(5.99)).to.equal('599');
     expect(value(57)).to.equal('5700');
+  });
+  it('[all]: Faz validação de Nome, CPF, e Telefone ao mesmo tempo (name, cpf, phone).', function () {
+    let test = {name: "Joao R", cpf: "11144477735", phone: "1198985645"};
+    expect(dataVerify.all(test)).to.equal(true);
   });
 });

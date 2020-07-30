@@ -8,9 +8,13 @@
     "url": "https://github.com/mrgenesis/mrgenesis.api"
   },
   "homepage": "https://github.com/mrgenesis/mrgenesis.api#readme",
-  "scripts" : {
+  "scripts": {
     "test": "mocha"
   },
   "keywords": [],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gn-api-sdk-node": "^1.0.0",
+    "moment": "^2.27.0"
+  }
 }

@@ -1,4 +1,4 @@
-const { name, cpf, phone } = require('../GerencianetBoletos/dataVerify');
+const { name, cpf, phone, value } = require('../GerencianetBoletos/dataVerify');
 const expect = require('chai').expect;
 
 describe('dataVerify', function () {
@@ -18,5 +18,10 @@ describe('dataVerify', function () {
     expect(phone(11799995555)).to.equal(false);
     expect(phone(11999995555)).to.equal(true);
     expect(phone(999995555)).to.equal(false);
+  });
+  it('[value]: Verifica se o valor atende o padrão da Gerencianet.', function () {
+    expect(value(5.7)).to.equal('570');
+    expect(value(5.99)).to.equal('599');
+    expect(value(57)).to.equal('5700');
   });
 });

@@ -29,6 +29,36 @@ function dataVerify() {
     phone: function (phone) {
       let rule = /^[1-9]{2}9?[0-9]{8}$/;
       return rule.test(phone);
+    },
+    value: function (value) {
+      value = value.toString();
+      let numArr
+      , decimal = ""
+      , decimalLen;
+
+      numArr = value.split(".");
+
+      if (numArr[1]) {
+          decimalLen = numArr[1].length;
+      } else {
+          decimalLen = 0;
+      }
+
+      switch (decimalLen) {
+      case 0:
+          decimal = "00";
+          break;
+      case 1:
+          decimal = numArr[1] + "" + "0";
+          break;
+      case 2:
+          decimal = numArr[1];
+          break;
+      default:
+          decimal = numArr[1].substr(0, 2);
+      }
+
+      return numArr[0] + "" + decimal;
     }
   }
 }

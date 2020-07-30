@@ -25,6 +25,10 @@ function dataVerify() {
       secund = (secund === 0 || secund === 1) ? 0 : 11 - secund;
       basicCpf = basicCpf + "" + secund;
       return basicCpf === cpf;
+    },
+    phone: function (phone) {
+      let rule = /^[1-9]{2}9?[0-9]{8}$/;
+      return rule.test(phone);
     }
   }
 }

@@ -1,10 +1,11 @@
 const moment = require('moment');
+const sandbox = process.env.ENVIRONMENT === 'sandbox';
 
 function bankingBillet(postInfo) {
   const options = {
     client_id: process.env.GN_ID,
     client_secret: process.env.GN_SECRET,
-    sandbox: process.env.ENVIRONMENT
+    sandbox: sandbox
   };
   const dueDate = moment().add(3, 'days').format('YYYY-MM-DD');
   const paymentBody = {

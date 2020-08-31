@@ -9,7 +9,8 @@
   },
   "homepage": "https://github.com/mrgenesis/mrgenesis.api#readme",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "func host start"
   },
   "keywords": [],
   "license": "MIT",

@@ -1,9 +1,12 @@
 const Gerencianet = require('gn-api-sdk-node');
 const dataVerify = require('./dataVerify');
 const configBankingBillet = require('./configBankingBillet');
+const mongo = require('../shared/mongoClient');
 
 module.exports = async function (context, req) {
-  // if (recaptcha(req.body))
+  const client = await mongo();
+
+  //TODO if (recaptcha(req.body))
   let { postInfo } = req.body;
   if (dataVerify.all(postInfo.customer)) {
     postInfo.product.value = dataVerify.value(postInfo.product.value);
@@ -17,6 +20,7 @@ module.exports = async function (context, req) {
           status: 201,
           body: bankingBillet
         }   
+        client.db(process.env.DB_NAME).collection('bankingBillet').insertOne(bankingBillet);
       })
       .catch((err) => {
         context.res = {

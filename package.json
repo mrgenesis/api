@@ -9,14 +9,16 @@
   },
   "homepage": "https://github.com/mrgenesis/mrgenesis.api#readme",
   "scripts": {
-    "test": "mocha"
+    "test": "jest",
+    "dev": "func host start"
   },
   "keywords": [],
   "license": "MIT",
   "dependencies": {
     "gn-api-sdk-node": "^1.0.0",
     "isomorphic-fetch": "^2.2.1",
-    "moment": "^2.27.0"
+    "moment": "^2.27.0",
+    "mongodb": "^3.6.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",

@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/mrgenesis/mrgenesis.api#readme",
   "scripts": {
-    "test": "mocha",
+    "test": "jest",
     "dev": "func host start"
   },
   "keywords": [],

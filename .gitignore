@@ -41,3 +41,6 @@ venv.bak/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# função de testes simples
+func-test/

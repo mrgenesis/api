@@ -12,6 +12,16 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "name": "user",
+      "type": "cosmosDB",
+      "diretion": "in",
+      "dtabaseName": "webservico",
+      "collectionName": "users",
+      "connectionStringSetting": "connectionStringSetting",
+      "id": "{id}",
+      "partitionKey": "{id}"
     }
   ]
 }
